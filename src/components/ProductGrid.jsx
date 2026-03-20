@@ -7,21 +7,21 @@ const products = [
     id: 1,
     name: "Royal Ceylon Sapphire",
     price: "$12,500",
-    image: "/assets/ceylon_sapphire_gem_1774036992974.png",
+    image: `${import.meta.env.BASE_URL}assets/ceylon_sapphire_gem_1774036992974.png`,
     description: "An exceptional unheated vivid blue sapphire from the mines of Ratnapura."
   },
   {
     id: 2,
     name: "Pigeon Blood Ruby",
     price: "$18,200",
-    image: "/assets/ruby_gem_1774037011565.png",
+    image: `${import.meta.env.BASE_URL}assets/ruby_gem_1774037011565.png`,
     description: "A flawless, brilliantly vibrant ruby showcasing intense, deep crimson hues."
   },
   {
     id: 3,
     name: "Imperial Emerald",
     price: "$9,800",
-    image: "/assets/emerald_gem_1774037264041.png",
+    image: `${import.meta.env.BASE_URL}assets/emerald_gem_1774037264041.png`,
     description: "A rare Muzo green emerald with impeccable clarity and a majestic cut."
   }
 ];

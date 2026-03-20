@@ -62,7 +62,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 2rem;
-  background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.9)), url('/assets/hero_bg_1774037283382.png'); /* Will be updated dynamically if needed, or by standard path */
+  background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.9)), url('/dinesh/assets/hero_bg_1774037283382.png'); /* Will be updated dynamically if needed, or by standard path */
   background-size: cover;
   background-position: center;
   position: relative;
