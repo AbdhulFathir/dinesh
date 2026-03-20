@@ -52,78 +52,7 @@ body {
   animation: textReveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1.5rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--glass-border);
-  z-index: 100;
-  transition: padding 0.3s ease;
-}
 
-.logo {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo h1 {
-  font-family: var(--font-serif);
-  color: var(--color-gold);
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-.logo span {
-  font-size: 0.65rem;
-  letter-spacing: 5px;
-  color: var(--color-gray);
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.nav-links a {
-  color: var(--color-white);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--color-gold);
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  left: 0;
-  background-color: var(--color-gold);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
 
 /* Hero Section */
 .hero {
