@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import QuickViewModal from './QuickViewModal';
 import './ProductGrid.css';
 
 const products = [
@@ -26,35 +27,58 @@ const products = [
 ];
 
 const ProductGrid = () => {
-  return (
-    <section id="collection" className="product-section">
-      <div className="section-header fade-in-up">
-        <span className="subtitle">Curated Selection</span>
-        <h2>The Masterpiece Collection</h2>
-        <div className="divider"></div>
-      </div>
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-      <div className="product-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card fade-in-up">
-            <div className="image-wrapper">
-              <img src={product.image} alt={product.name} />
-              <div className="overlay">
-                <button className="quick-view">Quick View</button>
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => {
+        setSelectedProduct(null);
+    }, 400); // Wait for transition to finish
+  };
+
+  return (
+    <>
+      <section id="collection" className="product-section">
+        <div className="section-header fade-in-up">
+          <span className="subtitle">Curated Selection</span>
+          <h2>The Masterpiece Collection</h2>
+          <div className="divider"></div>
+        </div>
+
+        <div className="product-grid">
+          {products.map((product) => (
+            <div key={product.id} className="product-card fade-in-up">
+              <div className="image-wrapper">
+                <img src={product.image} alt={product.name} />
+                <div className="overlay">
+                  <button className="quick-view" onClick={() => openModal(product)}>Quick View</button>
+                </div>
+              </div>
+              <div className="product-info">
+                <h3>{product.name}</h3>
+                <p className="description">{product.description}</p>
+                <div className="price-row">
+                  <span className="price">{product.price}</span>
+                  <button className="add-to-cart">Add to Cart</button>
+                </div>
               </div>
             </div>
-            <div className="product-info">
-              <h3>{product.name}</h3>
-              <p className="description">{product.description}</p>
-              <div className="price-row">
-                <span className="price">{product.price}</span>
-                <button className="add-to-cart">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+
+      <QuickViewModal 
+        product={selectedProduct} 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+      />
+    </>
   );
 };
 
