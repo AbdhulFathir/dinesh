@@ -1,0 +1,123 @@
+.footer {
+  background-color: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 6rem 2rem 2rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand .brand-name {
+  font-family: var(--font-serif);
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+.footer-brand .brand-subtitle {
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: var(--color-gray);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  max-width: 300px;
+}
+
+.footer-links h3, .footer-newsletter h3 {
+  font-family: var(--font-serif);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.footer-links a {
+  display: block;
+  color: var(--color-gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--color-gold);
+}
+
+.footer-newsletter p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.subscribe-form input {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  flex-grow: 1;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.subscribe-form input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-form button {
+  background: transparent;
+  border: none;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.subscribe-form button:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
